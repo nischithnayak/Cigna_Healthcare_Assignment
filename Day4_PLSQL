@@ -160,6 +160,30 @@ DBMS_OUTPUT.PUT_LINE('Average Marks: ' || average_marks);
 END;
 /
 
+5. 
+
+DECLARE
+    TYPE country_capital_table IS TABLE OF VARCHAR2(50) INDEX BY VARCHAR2(50);
+    country_capital country_capital_table;
+    country VARCHAR2(50);
+BEGIN
+    country_capital('India') := 'New Delhi';
+    country_capital('USA') := 'Washington D.C.';
+    country_capital('France') := 'Paris';
+    country_capital('Japan') := 'Tokyo';
+    country_capital('Germany') := 'Berlin';
+    country_capital('Australia') := 'Canberra';
+
+    country := '&country';
+
+    IF country_capital.EXISTS(country) THEN
+        DBMS_OUTPUT.PUT_LINE('The capital of ' || country || ' is ' || country_capital(country));
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Country not found');
+    END IF;
+END;
+/
+
 
 
 
