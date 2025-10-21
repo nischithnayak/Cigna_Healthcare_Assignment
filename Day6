@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Italian Pizza Order</title>
+</head>
+<body>
+  <h2>WELCOME TO ITALIAN PIZZA!</h2>
+  <p>We deliver pizza in 40 minutes max. If not - Pizza's on us!</p>
+
+  <form>
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Phone:</label><br>
+    <input type="text" name="area" placeholder="Area" size="5">
+    <input type="text" name="local1" placeholder="Local" size="5">
+    <input type="text" name="local2" placeholder="Local" size="5"><br><br>
+
+    <label>Number of slices:</label><br>
+    <input type="number" name="slices" min="1"><br><br>
+
+    <label>Pizza Size:</label><br>
+    <input type="radio" name="size" value="8-inch" checked> 8-inch
+    <input type="radio" name="size" value="10-inch"> 10-inch
+    <input type="radio" name="size" value="12-inch"> 12-inch
+    <input type="radio" name="size" value="14-inch"> 14-inch<br><br>
+
+    <label>Toppings:</label><br>
+    <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni
+    <input type="checkbox" name="topping" value="Onions"> Onions
+    <input type="checkbox" name="topping" value="Mushrooms"> Mushrooms
+    <input type="checkbox" name="topping" value="Sausage"> Sausage<br><br>
+
+    <input type="checkbox" name="terms" required> I agree to the TERMS AND CONDITIONS<br><br>
+
+    <button type="submit">Order Now</button>
+  </form>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Payment</title>
+</head>
+<body>
+  <h3>This is a secure 128-bit SSL Encrypted payment. You're safe.</h3>
+
+  <form>
+    <label>
+      <input type="radio" name="payment" value="credit" checked> Credit Card (Visa, Mastercard)
+    </label>
+    <label>
+      <input type="radio" name="payment" value="paypal"> PayPal
+    </label>
+    <br><br>
+
+    <label>Card number:</label><br>
+    <input type="text" maxlength="16" placeholder="Enter 16 digits" required><br><br>
+
+    <label>Expiration date:</label><br>
+    <select name="month">
+      <option>Month</option>
+      <option>01</option><option>02</option><option>03</option><option>04</option>
+      <option>05</option><option>06</option><option>07</option><option>08</option>
+      <option>09</option><option>10</option><option>11</option><option>12</option>
+    </select>
+
+    <select name="year">
+      <option>Year</option>
+      <option>2025</option><option>2026</option><option>2027</option><option>2028</option>
+      <option>2029</option><option>2030</option>
+    </select><br><br>
+
+    <label>CVV2/CVC2:</label><br>
+    <input type="text" maxlength="3" placeholder="3 digits" required><br><br>
+
+    <label>Full Name on Card:</label><br>
+    <input type="text" required><br><br>
+
+    <p>You will be charged $29.00 every month.</p>
+
+    <button type="submit">Complete Transaction</button>
+  </form>
+</body>
+</html>
