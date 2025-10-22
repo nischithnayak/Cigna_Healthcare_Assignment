@@ -1,0 +1,29 @@
+mkdir EmployeeApp
+
+cd EmployeeApp
+
+touch emp.component.ts emp.component.html
+
+git init
+
+git add emp.component.ts emp.component.html
+
+git commit -m "Added emp component files"
+
+git remote add origin https://github.com/nischithnayak/EmployeeApp.git
+
+git branch -M main
+
+git pull origin main 
+
+touch depts.component.html depts.component.ts
+
+git status
+
+git add .
+
+git commit -m "Updated emp.component.html and added depts component files"
+
+git push origin main
+
+

@@ -1,0 +1,38 @@
+1. What does git stash do?
+git stash temporarily saves your uncommitted changes
+
+--> git stash  
+
+2. What does git log show?
+git log displays the commit history of the repository.
+
+--> git log
+
+3. What does git branch do?
+git branch manages branches in your repository.
+
+--> git branch 
+
+4. What does git checkout do?
+git checkout is used to switch between branches or restore files from a previous commit.
+
+--> git checkout main
+
+5. How to implement merging in Git?
+
+--> git checkout main 
+
+6. Difference between Merge and Rebase
+
+Merge:
+* Combines changes from different branches
+* Keeps history of both branches
+--> git merge branch-name
+
+Rebase
+* Moves/rewrites commits on top of another branch
+* Creates a linear history 
+--> git rebase branch-name
+
+7. What is .gitignore used for?
+The .gitignore file specifies files or folders that Git should not track.
