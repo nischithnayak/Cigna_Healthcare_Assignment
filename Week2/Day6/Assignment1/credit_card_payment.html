@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Payment</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color:#f7f9fc;">
+
+  <div style="width:450px; margin:50px auto; background:white; border:1px solid #ccc; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+    <div style="background:#0078d7; color:white; padding:10px; border-top-left-radius:8px; border-top-right-radius:8px;">
+      <strong>🔒 This is a secure 128-bit SSL Encrypted payment. You're safe.</strong>
+    </div>
+
+    <form style="padding:20px;">
+      <label><input type="radio" name="payment" checked> Credit Card (Visa, Mastercard)</label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" width="40">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" width="40">
+      <label><input type="radio" name="payment"> PayPal</label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="60"><br><br>
+
+      <label>Card number</label><br>
+      <input type="text" placeholder="The 16 digits on front of your card" style="width:100%; padding:8px;"><br><br>
+
+      <label>Expiration date</label><br>
+      <select><option>Month</option></select>
+      <select><option>Year</option></select>
+      &nbsp;&nbsp;
+      <label>CVV2/CVC2</label>
+      <input type="text" placeholder="123" size="5"><br><br>
+
+      <label>Full Name on Card</label><br>
+      <input type="text" style="width:100%; padding:8px;"><br><br>
+
+      <p style="color:gray;">You will be charged $29.00 every month</p>
+
+      <button type="submit" style="width:100%; background:#ff9800; color:white; padding:10px; border:none; border-radius:5px;">Complete Transaction</button>
+    </form>
+  </div>
+</body>
+</html>

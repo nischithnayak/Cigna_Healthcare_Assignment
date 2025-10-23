@@ -1,0 +1,19 @@
+1. Why do we use the value attribute of the <option> tag?
+
+The value attribute specifies what data will actually be sent to the server when the form is submitted.
+
+
+2. What is <input type="hidden" /> ? Why do we use it?
+
+It creates an invisible input field in a form. It is not shown to the user, but its data is still submitted when the form is sent.
+
+3. What are the table-related tags in HTML?
+
+<table>	Defines the table.
+<tr>	Defines a table row.
+<td>	Defines a table data.
+<th>	Defines a table header.
+<caption>	Adds a title or caption to the table.
+<thead>	Groups header rows in a table.
+<tbody>	Groups the main content rows.
+<tfoot> Groups footer rows.
