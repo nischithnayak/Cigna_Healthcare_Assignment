@@ -1,1 +1,258 @@
+package Day9;
+//Create an abstract `Shape` class with `area()` method.  
+
+abstract class Shape {
+    abstract double area();
+}
+
+class Circle extends Shape {
+    double radius;
+    Circle(double r) { 
+        radius = r; 
+    }
+    double area() {
+         return Math.PI * radius * radius; 
+        }
+}
+
+public class AbstractionDemo {
+    public static void main(String[] args) {
+        Shape s = new Circle(5);
+        System.out.println("Area: " + s.area());
+    }
+}
+class Student {
+    String name;
+    int age;
+
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class ClassObjectDemo {
+    public static void main(String[] args) {
+        Student s1 = new Student("Alice", 20);
+        s1.display();
+    }
+}
+
+package Day9;
+
+// Practice Question:
+// Create a `BankAccount` class with private balance and controlled access.  
+
+class BankAccount {
+    private double balance;
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if(amount > 0) balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if(amount <= balance) balance -= amount;
+    }
+}
+
+public class EncapsulationDemo {
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.deposit(500);
+        acc.withdraw(200);
+        System.out.println("Balance: " + acc.getBalance());
+    }
+}
+package Day9;
+class Poly{
+    public static void main(String args[]){
+        Animal a=new Dog();
+        a.sound();
+        
+    }
+}
+class Animal{
+    void sound(){
+        System.out.println("Animal makes sound");
+    }
+}
+class Dog extends Animal{
+    @Override
+    void sound(){
+        System.out.println("Dog makes sound");
+    }
+}
+package Day9;
+// Practice Question:
+// Create a `Vehicle` superclass and `Car` subclass.  
+
+class Vehicle {
+    String brand = "Generic";
+    void drive() {
+        System.out.println("Driving vehicle...");
+    }
+}
+
+class Car extends Vehicle {
+    void honk() {
+        System.out.println("Car honks!");
+    }
+}
+
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.drive();
+        c.honk();
+    }
+}
+
+//Create a simple `Car` class with attributes and a method to display details.  
+
+public class OOPintro {
+    public static void main(String[] args) {
+        Car car1 = new Car("Benz", "Black", 4);
+        Car car2 = new Car("BMW", "White", 6);
+
+        car1.displayDetails();
+        car2.displayDetails();
+    }
+}
+
+class Car {
+    String brand;
+    String color;
+    int seatingCapacity;
+
+    Car(String brand, String color, int seatingCapacity) {
+        this.brand = brand;
+        this.color = color;
+        this.seatingCapacity = seatingCapacity;
+    }
+
+    void displayDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Color: " + color);
+        System.out.println("Seating Capacity: " + seatingCapacity);
+        
+    }
+}
+package Day9;
+//Demonstrate how OOP reduces duplication by creating two classes `Dog` and `Cat` that share a common `Animal` class.  
+
+class Animal {
+    String name;
+    void eat() {
+        System.out.println(name + " is eating.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println(name + " is barking.");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println(name + " is meowing.");
+    }
+}
+
+public class OOPMatters {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.name = "Rex";
+        d.eat();
+        d.bark();
+
+        Cat c = new Cat();
+        c.name = "Kitty";
+        c.eat();
+        c.meow();
+    }
+}
+package Day9;
+//Create an interface `Playable` with method `play()`.  
+interface Playable{
+    void play();
+}
+class Guitar implements Playable{
+    public void play(){
+        System.out.println("Play the Guitar");
+    }
+}
+public class P3{
+    public static void main(String[] args) {
+        Playable p=new Guitar();
+        p.play();
+
+    }
+}
+package Day9;
+//Create a `Counter` class that tracks how many objects have been created using
+// a static variable.  
+
+public class P4 {
+           public static void main(String[] args) {
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        Counter c3 = new Counter();
+
+        c1.display();
+        c2.display();
+        c3.display();
+ 
+    }
+}
+class Counter{
+    static int count;
+    int id;
+
+    Counter(){
+        count++;
+        id=count;
+    }
+        void display() {
+        System.out.println("Object ID: " + id + ", Total Objects: " + count);
+    }
+
+}
+package Day9;
+//Create a `Calculator` class that demonstrates both overloading and overriding.  
+
+public class P5 {
+    public static void main(String[] args) {
+        Calculator c=new Calculator();
+        c.sum(10,20);
+        c.sum(19.49f,2.79f);
+        Calculator s =new ScientificCalci();
+        s.type();
+    }
+}
+class Calculator{
+    int sum(int a, int b){
+        return a+b;
+    }
+    float sum(float a, float b){
+        return a+b;
+    }
+    String type(){
+        return "Basic Calculator";
+    }
+}
+class ScientificCalci extends Calculator{
+    @Override
+    String type(){
+        return "Scientific Calci";
+    }
+}
 
